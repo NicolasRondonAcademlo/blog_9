@@ -44,7 +44,7 @@ class User(AbstractBaseUser):
     admin = models.BooleanField(default=False)
     cellphone = models.CharField(max_length=10)
     name = models.CharField(max_length=150)
-    USERNAME_FIELD = "email"
+    USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = UserManager()
 
@@ -68,3 +68,6 @@ class User(AbstractBaseUser):
 
     def __str__(self):
         return self.email
+
+
+
