@@ -16,6 +16,7 @@ class ArticleViewSet(ModelViewSet):
     serializer_class = ArticleSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly,
                           IsOwnerOrReadOnly,]
+    # permission_classes = [permissions.IsAuthenticated]
 
     @action(detail=False)
     def published_articles(self, request, *args, **kwargs):
